@@ -4,11 +4,10 @@
         <title>Konversi Suhu</title>
     </head>
     <body>
-        <h1>Celcius = <span><?= celcius(); ?></span></h1>
-        <h1>Farenheit = <span><?= farenheit(); ?></span></h1>
-        <h1>Kelvin = <span><?= kelvin(); ?></span></h1>
-        <h1>Reamur = <span><?= reamur(); ?></span></h1>
-
+        <h1>Celcius = <span><?= isset($_GET['dor']) ? celcius() : '' ?></span></h1>
+        <h1>Farenheit = <span><?= isset($_GET['dor']) ? farenheit() : '' ?></span></h1>
+        <h1>Kelvin = <span><?= isset($_GET['dor']) ? kelvin() : '' ?></span></h1>
+        <h1>Reamur = <span><?= isset($_GET['dor']) ? reamur() : '' ?></span></h1>
 
         <form action="" method="get">
             <label>Celcius</label>
@@ -28,6 +27,10 @@
             <input type="submit" name="dor" value="Hitung_R">
             <br>
         </form>
+        <a href=index.php>
+            <button>Bersihkan</button>
+        </a>
+
     
     </body>
 </html>
